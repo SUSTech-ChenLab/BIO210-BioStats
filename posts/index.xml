@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on SUSTech BIO210 Biostatistics</title>
+    <link>https://xichenlab.com/BIO210-BioStats/posts/</link>
+    <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 22 May 2024 00:10:00 +0800</lastBuildDate>
+    <atom:link href="https://xichenlab.com/BIO210-BioStats/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 34 Chi-squared Tests For Categorical Data</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-34/</link>
+      <pubDate>Wed, 22 May 2024 00:10:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-34/</guid>
+      <description>&lt;p&gt;In this lecture, we will introduce the &lt;strong&gt;Chi-square goodness-of-fit&lt;/strong&gt; test. It is useful when we want to compare some categorical distributions observed from the data to a theoretical distribution. We will go through the intuition, the logic and the use case of it. We are going to revisit what you learnt during high school: the Mendel&amp;rsquo;s Plant Hybridisation experiments. You will be introduced to a very famous debate in the history of science.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 33 One-way ANOVA Examples</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-33/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-33/</guid>
+      <description>&lt;p&gt;In the previous two lectures, we talked about the idea of &lt;strong&gt;ANOVA&lt;/strong&gt;. We see why it is called ANOVA when it is actually used to compare means. As you have already seen, the calculation involved in doing an ANOVA test, even for only three groups, is quite daunting, especially when you want to perform &lt;em&gt;post hoc&lt;/em&gt; tests. Therefore, you should always use a statistical software to perform this kind of test in practice. In this lecture, we will have one practical session to showcase how to do ANOVA in &lt;strong&gt;R&lt;/strong&gt;. If you bring you laptop, make sure you install &lt;strong&gt;R&lt;/strong&gt; via the &lt;a href=&#34;https://mirrors.sustech.edu.cn/CRAN/&#34;&gt;SUSTech CRAN mirror&lt;/a&gt; and download the &lt;a href=&#34;https://xichenlab.com/BIO210-BioStats/src/iris_data.csv&#34;&gt;iris flower dataset&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 32 ANOVA &amp; Post hoc Multiple Comparisons</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-32/</link>
+      <pubDate>Fri, 17 May 2024 00:10:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-32/</guid>
+      <description>&lt;p&gt;Once we get familiar with the idea of ANOVA and see why we use it to compare means from more than 2 populations, there are still some technical details that we need to go through.&lt;/p&gt;&#xA;&lt;p&gt;Probably the most obvious and important question is: what should I do if I reject the null hypothesis using ANOVA? We do &lt;em&gt;post hoc&lt;/em&gt; tests in certain ways to control the experimental error rate.&lt;/p&gt;&#xA;&lt;p&gt;We will elaborate more during the lecture.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 31 Analysis of Variance (ANOVA)</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-31/</link>
+      <pubDate>Fri, 17 May 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-31/</guid>
+      <description>&lt;p&gt;In our real life, there are many situations where we need to compare the means from many groups ($\geqslant 3$), representing many different populations. How do we do this? Intuitively, we just perform &lt;em&gt;&lt;strong&gt;t&lt;/strong&gt;&lt;/em&gt;-tests for every pair of them. This is actually not a bad idea when the number of groups ($k$) is small. However, when $k$ becomes large, we have to perform many tests. If you remember the content from the previous lecture, you should understand that this actually increases our chances of making &lt;strong&gt;type I errors&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 30 The Behaviour of The p-value</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-30/</link>
+      <pubDate>Fri, 10 May 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-30/</guid>
+      <description>&lt;p&gt;There is not much to say in this post, because &lt;strong&gt;Lecture 30&lt;/strong&gt; is more like a practical session where we demonstrate how &lt;em&gt;p&lt;/em&gt;-values behave if we perform a lot of hypothesis testing. We will do some live coding during the lecture.&lt;/p&gt;&#xA;&#xA;&#xA;&lt;div class=&#34;admonition tip&#34;&gt;&#xA;    &lt;div class=&#34;title&#34;&gt;References&lt;/div&gt;&#xA;    &lt;div class=&#34;content&#34;&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://link.springer.com/article/10.1007/s13246-021-01068-1&#34;&gt;Examples of misinterpretation of p-values&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 29 Compare Two Population Variances</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-29/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-29/</guid>
+      <description>&lt;p&gt;In this lecture, we will introduce one method for comparing two population variances. In this case, we have two samples, independently drawn from two populations. Based on the sample variances, we want to investigate if the population variances are equal or not. Like said before, we cannot assess this problem directly. Instead, we approach this problem in an indirect way using the &lt;em&gt;p&lt;/em&gt;-value. That is, if wa assume that there is no difference between the two variances from the two populations, what would be the probability of observing the data we have or more extreme?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 28 Compare Two Population Means</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-28/</link>
+      <pubDate>Wed, 08 May 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-28/</guid>
+      <description>&lt;p&gt;Similar to the previous lecture where we talked about &lt;strong&gt;the two-sample test&lt;/strong&gt; regarding the proportions, we are going to the same notation for the population parameter representing the difference of the population means:&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\delta = \mu_1 -\mu_2&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;In the same way, our null and alternative hypotheses for a two-sided test are:&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\boldsymbol{H_0:} \ \;\delta = \mu_1 - \mu_2 = 0 \\&#xA;\boldsymbol{H_1:} \ \; \delta = \mu_1 - \mu_2 \neq 0&#xA;$$&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 27 Compare Two Population Proportions</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-27/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-27/</guid>
+      <description>&lt;p&gt;So far we have talked a lot about doing hypothesis testing for a particular population parameter, such as the population proportion $\pi$, the population mean $\mu$ and the population variance $\sigma^2$. We take one random sample from the population, and test if the population parameter is equal to or greater/less than a specific value. This is called a &lt;strong&gt;one-sample test&lt;/strong&gt;. Most of the time the specific value comes from our previous knowledge about the population.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 26 Error, Power And Sample Size Estimation</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-26/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-26/</guid>
+      <description>&lt;p&gt;With all the examples we have gone through, you can see that we always set the &lt;strong&gt;significance level&lt;/strong&gt; $\alpha$ to be a very small number, with $0.05$ being the most frequently used one.However, it is never 0. The consequence is that there is still a chance we could draw the wrong conclusion when we make a decision based on the &lt;em&gt;p&lt;/em&gt;-value. When that occurs, we make errors.&lt;/p&gt;&#xA;&lt;p&gt;Whenever we make a decision, there are only two possible outcomes: either we reject $H_0$ or we do not reject $H_0$. The ground truth (population), though not known to us, also only has two possibilities: either $H_0$ is true or $H_0$ is false. Therefore, we can have four possible scenario when making a decision after performing a hypothesis testing. You can relate this to the diagnostic testing we talked about in &lt;strong&gt;Lectures 5, 6 and 7&lt;/strong&gt;:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 25 More On Hypothesis Testing</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-25/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-25/</guid>
+      <description>&lt;p&gt;In the previous lectures, we practised the logic flow of hypothesis testing over and over again, so I hope you are now familiar with the concept of hypothesis testing. Basically, we have some data in our hands, and we come up with some hypotheses by incorporating the knowledge about certain population parameters based on the previous studies or experience. For example:&lt;/p&gt;&#xA;&#xA;&#xA;&lt;div class=&#34;admonition note&#34;&gt;&#xA;    &lt;div class=&#34;title&#34;&gt;Hypotheses based on current data&lt;/div&gt;&#xA;    &lt;div class=&#34;content&#34;&gt;&lt;ul&gt;&#xA;&lt;li&gt;The proportion of people who have type B may not be 9%.&lt;/li&gt;&#xA;&lt;li&gt;The proportion of MCQs whose correct answers are Bs might be more than 25%.&lt;/li&gt;&#xA;&lt;li&gt;The normal body temperature may not be 37 $^\circ$C.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;How do we test them? As we mentioned repeatedly during previous lectures, there is no way we can directly test if those hypotheses are true or not. However, we can approach the problem in an indirect way. That is, we assume the opposite is true ($H_0$):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 24 Hypothesis Testing Terms</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-24/</link>
+      <pubDate>Fri, 12 Apr 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-24/</guid>
+      <description>&lt;p&gt;In the previous lecture, we talked about the intuition and the basic idea of hypothesis testing. There are still many things need to be formalised. In addition, I&amp;rsquo;m sure many of you had some burning questions. We dealt with them in this lecture.&lt;/p&gt;&#xA;&lt;h2 id=&#34;fisher-vs-neyman-pearson&#34;&gt;Fisher vs. Neyman-Pearson&lt;/h2&gt;&#xA;&lt;p&gt;Historically, there are two different types of hypothesis testing. The method developed by Ronald Fisher allows us to compute the probability of observing the data or more extreme under the &lt;strong&gt;null hypothesis&lt;/strong&gt;, which is a default stand where we assume there is &lt;em&gt;&lt;strong&gt;no&lt;/strong&gt;&lt;/em&gt; difference, &lt;em&gt;&lt;strong&gt;no&lt;/strong&gt;&lt;/em&gt; effect, &lt;em&gt;&lt;strong&gt;no&lt;/strong&gt;&lt;/em&gt; association, &lt;em&gt;&lt;strong&gt;no&lt;/strong&gt;&lt;/em&gt; relationship &lt;em&gt;etc.&lt;/em&gt;. Based on the probability, we make decisions about whether to reject the null hypothesis or not. The Neyman-Pearson framework proposed by Jersey Neyman and Egon Pearson formulates a null hypothesis and an &lt;strong&gt;alternative hypothesis&lt;/strong&gt; of an &lt;strong&gt;effect size&lt;/strong&gt;. In addition, the control of the error rates in the long run was considered.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 23 Introduction To Hypothesis Testing</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-23/</link>
+      <pubDate>Fri, 12 Apr 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-23/</guid>
+      <description>&lt;p&gt;We have been using the property of the sampling distributions of the sample mean, sample variance and sample proportion to make interval estimations of the corresponding population parameters. They are very useful, but they are not the whole story of &lt;strong&gt;inferential statistics&lt;/strong&gt;. Otherwise, the course will be much shorter.&lt;/p&gt;&#xA;&lt;p&gt;Today, we introduced a very powerful technique: &lt;strong&gt;the hypothesis testing&lt;/strong&gt;. As the name suggested, it allows us to test hypotheses. You see, we rarely know the properties of the population. By drawing samples and studying the data we have, we may come up with some hypotheses. For example, when I was very little, I was told that the normal body temperature was 37 $^\circ$C, but the data I have collected now suggest otherwise. Therefore, I hypothesise that the normal body temperature may not be 37 $^\circ$C. How do we figure out if the hypothesis is correct or not? Or can we at least calculate the probability of our hypothesis being true based on the sample? That is, the probability of this sort:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 22 Confidence Interval For The Proportion</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-22/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-22/</guid>
+      <description>&lt;p&gt;Now that we have figured out the sampling distribution of the sample proportion, we can make interval estimation and construct confidence intervals for the &lt;strong&gt;sample proportion&lt;/strong&gt;. Before we do that, let&amp;rsquo;s use an example to look the distribution of $P$ one more time.&lt;/p&gt;&#xA;&lt;h2 id=&#34;a-simplified-version-of-gene-expression&#34;&gt;A Simplified Version of Gene Expression&lt;/h2&gt;&#xA;&lt;p&gt;As we know, &lt;strong&gt;DNA&lt;/strong&gt; is our genetic material. In order for a gene to function, the gene needs to be &amp;ldquo;converted&amp;rdquo; into proteins&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. This process is describe by the &lt;strong&gt;central dogma of molecular biology&lt;/strong&gt; that we learnt in high school. Here is the draft version of it from &lt;strong&gt;Francis Crick&amp;rsquo;s&lt;/strong&gt; conference notes in a symposium held at London back in 1957, one year before the central dogma was officially published:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 21 Sampling Distribution of The Sample Proportion</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-21/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-21/</guid>
+      <description>&lt;p&gt;What we have been dealing with so far are all absolute quantities, such as the number of emails we received in a given time window and the body temperatures of healthy people. In many other situations, the relative quantities are more meaningful. In this lecture, we introduce a new population parameter: the &lt;strong&gt;population proportions&lt;/strong&gt;, representing the proportion (or fraction, percentage &lt;em&gt;etc.&lt;/em&gt;) of the thing of our interest. To be consistent with the notations we are using in this course, we use the Greek letter $\pi$ to denote the population proportion.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 20 Confidence Interval For The Variance</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-20/</link>
+      <pubDate>Sun, 07 Apr 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-20/</guid>
+      <description>&lt;p&gt;Once we have introduced the confidence intervals for the population mean $\mu$, the next question comes natural: how do we construct confidence intervals for the population variance $\sigma^2$? Since we have previously discussed the sampling distribution of the sample variance, it is kind of straightforward for us to derive the confidence interval for the population variance.&lt;/p&gt;&#xA;&lt;h2 id=&#34;interval-estimation-for-boldsymbolsigma2&#34;&gt;Interval Estimation For $\boldsymbol{\sigma^2}$&lt;/h2&gt;&#xA;&lt;p&gt;We can just follow the same thought from the previous lecture when we derived the CI for the population mean $\mu$. Let&amp;rsquo;s start with what we know about the variance. If you recall, we know that:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 19 Confidence Interval For The Mean</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-19/</link>
+      <pubDate>Sun, 07 Apr 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-19/</guid>
+      <description>&lt;p&gt;In the previous lectures, we talked about using the sample mean ($\bar{X}$ and $\bar{x}$) as the estimator and estimate for the population mean ($\mu$) and using the sample variance ($S^2$ and $s^2$) as the estimator and estimate for the population variance ($\sigma^2$). We also introduced one intuitive way of constructing an estimator: the &lt;strong&gt;maximum likelihood estimation (MLE)&lt;/strong&gt;. In those cases, we were just using one specific value, that is, just one number, to estimate the population parameter of interest. It is called a point estimation. We use the sample mean and the sample variance, because they are intuitive and unbiased.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 18 The Error Curve Derived By MLE</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-18/</link>
+      <pubDate>Fri, 29 Mar 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-18/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Ronald_Fisher&#34;&gt;Ronald Fisher&lt;/a&gt; introduced the method of using maximum likelihood estimation to estimate the parameters of a distribution or population. However, it was &lt;a href=&#34;http://en.wikipedia.org/wiki/Carl_Friedrich_Gauss&#34;&gt;Carl Friedrich Gauss&lt;/a&gt; who first developed the idea of maximum likelihood. Actually, the normal PDF can be derived using the idea of maximum likelihood. We will investigate in this lecture.&lt;/p&gt;&#xA;&lt;p&gt;Like mentioned in &lt;strong&gt;Lecture 12&lt;/strong&gt;, the first question everybody has when they first encountered the normal PDF is: where does it come from? The PDF is beautiful. Why are two of the most important constants $\pi$ and $e$ there? The eureka moment comes after reading &lt;a href=&#34;https://www.tandfonline.com/doi/abs/10.1080/0025570X.2006.11953386&#34;&gt;The Evolution of the Normal Distribution&lt;/a&gt; by &lt;a href=&#34;https://stahl.ku.edu&#34;&gt;Prof. Saul Stahl&lt;/a&gt; and, of course, Gauss&amp;rsquo; &lt;a href=&#34;https://archive.org/details/theoryofmotionof00gausuoft&#34;&gt;Theory of the Motion of the Heavenly Bodies Moving about the Sun in Conic Sections&lt;/a&gt;, the translated version. The most intuitive way of deriving the normal PDF is actually follow the history to see what was known in Gauss&amp;rsquo; time and how he derived the normal PDF as a curve to describe errors in measurements, that is, the &lt;strong&gt;error curve&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 17 Maximum Likelihood Estimation (MLE)</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-17/</link>
+      <pubDate>Fri, 29 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-17/</guid>
+      <description>&lt;p&gt;Previously we all assumed that we somehow knew the population parameters, such as the mean ($\mu$) and the variance ($\sigma^2$). Starting this lecture, we have finally reached a stage where we do NOT know the population parameters. Instead, we have a representative sample. Using the information from the sample, we &amp;ldquo;make a guess&amp;rdquo;, or &lt;strong&gt;estimate&lt;/strong&gt; the parameters of the population.&lt;/p&gt;&#xA;&lt;p&gt;In the simplest case, if we are interested in the population mean $\mu$ or variance $\sigma^2$, we can just provide a number to represent our best &amp;ldquo;guess&amp;rdquo; or &lt;strong&gt;estimate&lt;/strong&gt; to the mean or variance. This is called the &lt;strong&gt;point estimation&lt;/strong&gt;. How the question becomes: how do we provide a reasonable estimate Intuitively, we probably will use the sample mean $\bar{x}$ as the estimate for the population mean $\mu$ and the sample variance $s^2$ the population variance $\sigma^2$. It is consistent with our common sense, but why does it work?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 16 Sampling Distributions of The Sample Variance</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-16/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-16/</guid>
+      <description>&lt;p&gt;The content in this article is a bit dry and difficult, but you only need to pay attention to the logic, not the math details&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Now that we know the distribution of the sample mean $\bar{X}$, the next question comes naturally: what is the &lt;strong&gt;sampling distribution of the sample variance&lt;/strong&gt; $S^2$? We do not really have a theorem to tell us about the distribution of the sample variance, so we have to figure it out by ourselves. Similarly, this distribution allows us to calculate the following type of probability:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 15 Sampling Distributions &amp; The Central Limit Theorem</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-15/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-15/</guid>
+      <description>&lt;p&gt;In this lecture, we introduced the most important two concepts in this entire course: &lt;strong&gt;the sampling distribution&lt;/strong&gt; and &lt;strong&gt;the central limit theorem&lt;/strong&gt;. We have seen how they help us make inferences about the population based on just one sample with limited size ($n$). They are the foundation for the &lt;strong&gt;hypothesis testing&lt;/strong&gt; that we are going to introduce in the future.&lt;/p&gt;&#xA;&lt;p&gt;Like mentioned before, in &lt;strong&gt;inferential statistics&lt;/strong&gt; we would like to use the data from the sample to make inferences about certain unknown properties of the population. In this lesson, we are still going to assume that we know the population properties to see how the sample behaves. Soon we are going to do the opposite, I promise.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 14 Populations And Samples</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-14/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-14/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Lecture 14&lt;/strong&gt; marks the start of the section of statistics, or more precisely, the &lt;strong&gt;inferential statistics&lt;/strong&gt; section. In inferential statistics, we would like to use the information from the &lt;strong&gt;samples&lt;/strong&gt; we get to make inference and some generalised conclusions about &lt;strong&gt;populations&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;First, we need to clarify the concepts of &lt;strong&gt;population&lt;/strong&gt; and &lt;strong&gt;sample&lt;/strong&gt;. We actually already talked about them in previous lectures, even though we have not formally defined them. The concepts of &lt;strong&gt;populations&lt;/strong&gt; and &lt;strong&gt;samples&lt;/strong&gt; are actually difficult to describe. When we talk about them, we &lt;strong&gt;roughly&lt;/strong&gt; know what we are talking about. We can immediately get an idea simply based on the meaning of those words. However, we do not have formal definitions on them. You can check the articles in the &lt;strong&gt;References&lt;/strong&gt; section. It is not that straightforward. Anyway, we will try to define and tell the difference between them during the lecture.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 13 Normal Distributions</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-13/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-13/</guid>
+      <description>&lt;p&gt;In Lecture 13, we talked about why the normal distribution was useful and how we used it to calculate probabilities of events of our interest. This was the last lecture in the probability section. We moved on to statistics section after this lecture.&lt;/p&gt;&#xA;&lt;h2 id=&#34;normal-gaussian-distributions&#34;&gt;Normal (Gaussian) Distributions&lt;/h2&gt;&#xA;&lt;p&gt;We have come across some basics about the normal distributions. The PDF is:&lt;/p&gt;&#xA;&lt;p&gt;$$f_X(x)=\cfrac{1}{\sqrt{2\pi}\sigma}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$&lt;/p&gt;&#xA;&lt;h2 id=&#34;expectation--variance&#34;&gt;Expectation &amp;amp; Variance&lt;/h2&gt;&#xA;&lt;p&gt;Like always, whenever we get a PDF or PMF, we always need to check whether it describes a valid probabilistic model. On top of that, it is always good to know the expectation and variance of the distribution. We can show that:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 12 Continuous Random Variables</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-12/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-12/</guid>
+      <description>&lt;p&gt;Once we have seen some discrete random variables, we can move on to look at &lt;strong&gt;continuous random variables&lt;/strong&gt;. As the name indicated, the numbers taken by a continuous random variable are continuous. Like we discussed before, in this case the probability of taking any specific number is zero. Therefore, it does NOT make sense to use &lt;strong&gt;PMF&lt;/strong&gt; to describe a continuous random variable. Instead, we use &lt;strong&gt;probability density function (PDF)&lt;/strong&gt;, denoted by $f_X(x)$.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 11 Discrete Random Variables</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-11/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-11/</guid>
+      <description>&lt;p&gt;Now we have introduced the concept of &lt;strong&gt;random variables&lt;/strong&gt;, let&amp;rsquo;s look at some common random variables, starting with the easier cases of discrete random variables. They are common because we can easily relate them to our real-life events. Once we get familiar with them, we can use them to model and solve problems.&lt;/p&gt;&#xA;&lt;h2 id=&#34;bernoulli-random-variables&#34;&gt;Bernoulli Random Variables&lt;/h2&gt;&#xA;&lt;p&gt;Like I said before, when we first come across a new thing, always &lt;strong&gt;ALWAYS&lt;/strong&gt; start with simple examples to get our intuition right. Then, what is the simplest discrete random variable? Well &amp;hellip; probably a random variable that can take only two numbers. A random variables that takes two values, usually 1 (head, success, on, &lt;em&gt;etc.&lt;/em&gt;) or 0 (tail, failure, off, &lt;em&gt;etc.&lt;/em&gt;), is a &lt;strong&gt;Bernoulli&lt;/strong&gt; random variable.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 10 Random Variables</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-10/</link>
+      <pubDate>Wed, 13 Mar 2024 00:10:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-10/</guid>
+      <description>&lt;p&gt;In this lecture, we introduced perhaps the first &lt;strong&gt;&amp;ldquo;new&amp;rdquo;&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;!-- raw HTML omitted --&gt; concept in this course: &lt;strong&gt;random variables&lt;/strong&gt;. It is very important to understand the concepts of random variables and the expectation and variance of a random variable. When coming across something new, always start with something simple to get a rough idea. Therefore, we used some simple and intuitive examples, such as coin tossing, during the lectures.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 9 Counting</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-09/</link>
+      <pubDate>Wed, 13 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-09/</guid>
+      <description>&lt;p&gt;In &lt;strong&gt;Lecture 9&lt;/strong&gt;, we paused a little bit and did a quick recap about the basic counting principles. The content was basically what you have learnt during your high school math classes but in English. You see that the counting principles we are talking about greatly help us calculate the probability of events consisting outcomes from discrete sample spaces.&lt;/p&gt;&#xA;&lt;p&gt;You might ask why we bother to do a recap about counting. The &lt;strong&gt;discrete uniform law&lt;/strong&gt; tells us that if we let all outcomes in a discrete sample space be equally likely, the probability of any event can be simply calculated as:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 8 Independent Events</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-08/</link>
+      <pubDate>Fri, 08 Mar 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-08/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Lecture 8&lt;/strong&gt; introduced the concept of &lt;strong&gt;independence&lt;/strong&gt;. It is a relatively straightforward concept to understand. Intuitively, events $A$ and $B$ are independent if:&lt;/p&gt;&#xA;&lt;p&gt;$$\mathbb{P}(A|B)=\mathbb{P}(A), \mathbb{P}(B) \neq 0$$&lt;/p&gt;&#xA;&lt;p&gt;Using Bayes&amp;rsquo; terms, we can say that the &lt;strong&gt;posterior probability&lt;/strong&gt; is equal to the &lt;strong&gt;prior probability&lt;/strong&gt;. In other words, event $B$ has nothing to do with $A$; event $B$ does not provide any information about event $A$; given that event $B$ has occurred, we do not change our belief about event $A$ &amp;hellip; Recall that from &lt;strong&gt;Lecture 5&lt;/strong&gt;, we have:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 7 More On The Bayes Theorem</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-07/</link>
+      <pubDate>Fri, 08 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-07/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Lecture 7&lt;/strong&gt; introduced more examples of using the Bayes&amp;rsquo; theorem to help us make decisions in real life. Sometimes, the conclusion seems counterintuitive at the beginning. However, if you grasp the idea of &lt;strong&gt;&amp;ldquo;using the new information to update your prior belief&amp;rdquo;&lt;/strong&gt;, you will find the Bayes&amp;rsquo;s rule very natural. We also introduced a new form of the Bayes&amp;rsquo; rule without talking about the events $A$, $B$ &lt;em&gt;etc.&lt;/em&gt;:&lt;/p&gt;&#xA;&lt;p&gt;$$\mathbb{P}(H_i|E) = \cfrac{\mathbb{P}(H_i)\mathbb{P}(E|H_i)}{\mathbb{P}(E)} = \cfrac{\mathbb{P}(E|H_i)}{\sum_{i=1}^n \mathbb{P}(H_i)\mathbb{P}(E|H_i)} \cdot \mathbb{P}(H_i)$$&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 6 The Bayes&#39; Theorem</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-06/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-06/</guid>
+      <description>&lt;p&gt;Now we have get familiar with &lt;strong&gt;conditional probabilities&lt;/strong&gt;. The basic definition and formula is:&lt;/p&gt;&#xA;&lt;p&gt;$$\mathbb{P}(A|B)=\cfrac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \textmd{, } \mathbb{P}(B) \neq 0$$&lt;/p&gt;&#xA;&lt;p&gt;In the previous lecture, we used some examples to show how to calculate three probabilities: $\mathbb{P}(A \cap B)$, $\mathbb{P}(B)$ and $\mathbb{P}(A|B)$, which are essentially the three terms in the above formula. In reality, we sometimes need to calculate some very complicated probabilities, but they all boils down to some sort of combinations of those three probabilities. Therefore, let&amp;rsquo;s generalise those calculations and make them more useful.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 5 Conditional Probability</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-05/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-05/</guid>
+      <description>&lt;p&gt;In &lt;strong&gt;Lectures 5&lt;/strong&gt;, we have introduced the concept of conditional probability and see how we could use it to learn from the real world. Whenever we come across a new concept, the first thing is always to build up our intuition about it. Using a few simple examples, we start to get some ideas about conditional probabilities.&lt;/p&gt;&#xA;&lt;p&gt;In conditional probability, we are interested in calculating the probability of an event when taking into account some knowledge that we have. Recall that $\mathbb{P}(A)$ denotes the probability of event $A$, which represents our belief on how likely event $A$ will occur. Now we know another event $B$ has occurred. Taking this new piece of information into account, what is the probability of event $A$ to occur? That is basically the probability of $A$ given $B$, denoted by:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 4 Probability Axioms</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-04/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-04/</guid>
+      <description>&lt;h2 id=&#34;probability-axioms&#34;&gt;Probability Axioms&lt;/h2&gt;&#xA;&lt;p&gt;After we finished the content of descriptive statistics, we moved on to the section of probability, which is really good at dealing with randomness. You have probably already come across some concepts of probability. In &lt;strong&gt;Lecture 4&lt;/strong&gt;, we just made things formal. Probability axioms were introduced in this lecture. Those are the things we need to agree on. They are quite intuitive, and hopefully, you have no problem accepting them as facts:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 3 Numerical Measures</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-03/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-03/</guid>
+      <description>&lt;h2 id=&#34;numerical-measures&#34;&gt;Numerical Measures&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Lecture 3&lt;/strong&gt; concludes the section of descriptive statistics. From the previous lectures we demonstrated that graphs were a nice way of showing the data. One can immediately get a rough idea about how the data look like from a good graph. However, when the data is presented in graphs, the quantitative information in the data is lost. Therefore, it would be good if we could just use a bunch of numbers to summarise the data. This was what we talked about during Lecture 3.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 2 Descriptive Statistics</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-02/</link>
+      <pubDate>Fri, 23 Feb 2024 00:00:10 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-02/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Lecture 2&lt;/strong&gt; started to introduce some basic techniques in descriptive statistics. You can think of this lecture as a recap of what you have already known in the past. Make sure you get familiar with all the graphs introduced in this lecture, because we are going to use them all the time in future lectures. Perhaps the most important graph in this course is the &lt;a href=&#34;https://online.stat.psu.edu/stat200/lesson/2/2.2/2.2.1&#34;&gt;&lt;strong&gt;histogram&lt;/strong&gt;&lt;/a&gt;, which is the most common way of showing frequency distributions:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 1 Course Introduction</title>
+      <link>https://xichenlab.com/BIO210-BioStats/posts/lecture-01/</link>
+      <pubDate>Fri, 23 Feb 2024 00:00:00 +0800</pubDate>
+      <guid>https://xichenlab.com/BIO210-BioStats/posts/lecture-01/</guid>
+      <description>&lt;p&gt;In the first lecture of the entire course, we had a brief overview of the course structure and content. &lt;strong&gt;Lecture 1&lt;/strong&gt; started with some administrative aspects of the course. Then we provided an introduction about what is and is &lt;strong&gt;NOT&lt;/strong&gt; included in the course, what to expect from the course and the difference between &lt;strong&gt;BIO210&lt;/strong&gt; and &lt;strong&gt;MA212&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Your final grade is a &lt;strong&gt;weighted average&lt;/strong&gt; &lt;!-- raw HTML omitted --&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;!-- raw HTML omitted --&gt; of the following:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
