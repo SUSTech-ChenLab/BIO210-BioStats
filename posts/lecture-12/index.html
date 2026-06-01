@@ -177,7 +177,7 @@
 <p>for any interval on a real line.</p>
 <p>When dealing with continuous random variables, it does not make sense to talk about each specific number. We talk about <strong>intervals</strong>. We use <strong>PDF</strong> such that the <strong>area under the curve</strong> of an interval represents the probability of the random variable falling into that interval.</p>
 <p>Having said that, now if I put a number $x$ into $f_X(x)$, I still get a number returned by the PDF. You tell me that the number is not the probability. What is it? How should I interpret this <strong>probability density</strong>? One way of looking at densities is to think about a very small interval $\delta$, and put the following picture in your head:</p>
-<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/small_interval_prob.png" width="500px">
+<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/small_interval_prob.png" width="500px"/>
 </figure>
 
 <p>Since $\delta$ is vary small we have:</p>
@@ -188,26 +188,26 @@
 <h2 id="comparisons-to-discrete-random-variables">Comparisons To Discrete Random Variables</h2>
 <p>Since we have introduced discrete random variables, there is not really anything new in terms of continuous random variables. For the things related to discrete random variables, we also have them for continuous random variables, such as expectations and variances. When having trouble dealing with a concept in the continuous case, think of its counterpart in the discrete case. When we do <strong>summation</strong> in the discrete case, we do <strong>integration</strong> in the continuous case:</p>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: center">The continuous case</th>
-          <th style="text-align: center">The discrete case</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">$\mathbb{E}[X] = \int_{-\infty}^{\infty}xf_X(x)\,\mathrm{d}x$</td>
-          <td style="text-align: center">$\mathbb{E}[X] = \sum_{x}xp_X(x)$</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">$\mathbb{E}[g(X)] = \int_{-\infty}^{\infty}g(x)f_X(x)\,\mathrm{d}x$</td>
-          <td style="text-align: center">$\mathbb{E}[g(X)] = \sum_{x}g(x)p_X(x)$</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">$\mathbb{V}\textmd{ar}(X) = \int_{-\infty}^{\infty}\left(X-\mathbb{E}[X]\right)^2f_X(x)\,\mathrm{d}x$</td>
-          <td style="text-align: center">$\mathbb{V}\textmd{ar}(X)= \sum_{x}\left( X - \mathbb{E}[X] \right)^2p_X(x)$</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th style="text-align:center">The continuous case</th>
+<th style="text-align:center">The discrete case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\mathbb{E}[X] = \int_{-\infty}^{\infty}xf_X(x)\,\mathrm{d}x$</td>
+<td style="text-align:center">$\mathbb{E}[X] = \sum_{x}xp_X(x)$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbb{E}[g(X)] = \int_{-\infty}^{\infty}g(x)f_X(x)\,\mathrm{d}x$</td>
+<td style="text-align:center">$\mathbb{E}[g(X)] = \sum_{x}g(x)p_X(x)$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbb{V}\textmd{ar}(X) = \int_{-\infty}^{\infty}\left(X-\mathbb{E}[X]\right)^2f_X(x)\,\mathrm{d}x$</td>
+<td style="text-align:center">$\mathbb{V}\textmd{ar}(X)= \sum_{x}\left( X - \mathbb{E}[X] \right)^2p_X(x)$</td>
+</tr>
+</tbody>
 </table>
 <h2 id="cumulative-density-functions-cdfs">Cumulative Density Functions (CDFs)</h2>
 <p>To help calculate probabilities in a convenient way, we can look at the <strong>cumulative density function (CDF)</strong> of a continuous random variable. It is denoted and defined as:</p>
@@ -238,7 +238,8 @@
 <p>$$\varphi\Delta=\cfrac{h}{\sqrt{\pi}}\,e^{-hh\Delta\Delta}$$</p>
 <p>Gauss also commented on $h$:</p>
 <blockquote>
-<p>Finally, the constant $h$ can be considered as the measure of precision of the observations.</p></blockquote>
+<p>Finally, the constant $h$ can be considered as the measure of precision of the observations.</p>
+</blockquote>
 <p>The exact procedures to get to that point and the final form of the normal PDF that is commonly seen in modern text books deserves an entire post on its own on another day. I will probably write about it in future when I have time and fully digested the section in Gauss&rsquo; book. We will make an attempt to partly reproduce Gauss&rsquo; procedure in <strong>Lecture 18</strong>. For now, check those articles in the <strong>References</strong> section for more details.</p>
 <p>The French mathematician <strong>Pierre-Simon Laplace</strong> was also searching for the error PDF but ended up with a weird one. However, it is his <strong>Central Limit Theorem</strong> that makes the normal PDF so useful. Anyway, we will dedicate an entire lecture (<strong>Lecture 13</strong>) in the next lesson to talk about normal PDFs. You will see why and how it is useful.</p>
 <h2 id="about-the-word-distribution">About The Word &ldquo;Distribution&rdquo;</h2>
@@ -250,30 +251,30 @@
 <p>$$X \sim \textmd{Distribution short name (list of parameters)}$$</p>
 <p>Here are some examples:</p>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: center">Distribution</th>
-          <th style="text-align: center">Notation</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">Bernoulli</td>
-          <td style="text-align: center">$X \sim Ber(p)$</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">Binomial</td>
-          <td style="text-align: center">$X \sim B(n,p)$</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">Poisson</td>
-          <td style="text-align: center">$X \sim Pois(\lambda)$</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">Normal</td>
-          <td style="text-align: center">$X \sim \mathcal{N}(\mu, \sigma^2)$</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th style="text-align:center">Distribution</th>
+<th style="text-align:center">Notation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Bernoulli</td>
+<td style="text-align:center">$X \sim Ber(p)$</td>
+</tr>
+<tr>
+<td style="text-align:center">Binomial</td>
+<td style="text-align:center">$X \sim B(n,p)$</td>
+</tr>
+<tr>
+<td style="text-align:center">Poisson</td>
+<td style="text-align:center">$X \sim Pois(\lambda)$</td>
+</tr>
+<tr>
+<td style="text-align:center">Normal</td>
+<td style="text-align:center">$X \sim \mathcal{N}(\mu, \sigma^2)$</td>
+</tr>
+</tbody>
 </table>
 
 
