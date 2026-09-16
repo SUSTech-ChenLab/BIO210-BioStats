@@ -173,7 +173,7 @@
 <p>We can just follow the same thought from the previous lecture when we derived the CI for the population mean $\mu$. Let&rsquo;s start with what we know about the variance. If you recall, we know that:</p>
 <p>$$\cfrac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$$</p>
 <p>Since the $\chi^2$-distribution has a well defined PDF, we could use it to help us to calculate probabilities. If we want a two-sided 95% CI for $\sigma$, we often would like a &ldquo;symmetrical&rdquo; one. We can put the following picture in our head to help us visualise in the same way when we construct the CI for the mean:</p>
-<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/95CI_var.png" width="350px">
+<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/95CI_var.png" width="350px"/>
 </figure>
 
 <p>The probability of a $\chi^2$ random variable with a degree of freedom $\nu$ falling into the middle white area is $95\%$. Therefore, we start from there (note all of them are positive numbers):</p>
@@ -191,20 +191,20 @@ $$</p>
 <h2 id="conditions-to-use-the-technique">Conditions To Use The Technique</h2>
 <p>Now we summarise below the confidence intervals we have constructed so far. The two-sided confidence intervals with $(1-\alpha) \times 100\%$ confidence level are:</p>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: center">$\boldsymbol{\mu}$ with known $\boldsymbol{\sigma}$</th>
-          <th style="text-align: center">$\boldsymbol{\mu}$ with unknown $\boldsymbol{\sigma}$</th>
-          <th style="text-align: center">$\boldsymbol{\sigma^2}$</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">$\bar{X} \pm Z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}$</td>
-          <td style="text-align: center">$\bar{X} \pm t_{\frac{\alpha}{2},n-1} \cdot \frac{S}{\sqrt{n}}$</td>
-          <td style="text-align: center">$\left[ \cfrac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2},n-1}}, \cfrac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2},n-1}} \right]$</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th style="text-align:center">$\boldsymbol{\mu}$ with known $\boldsymbol{\sigma}$</th>
+<th style="text-align:center">$\boldsymbol{\mu}$ with unknown $\boldsymbol{\sigma}$</th>
+<th style="text-align:center">$\boldsymbol{\sigma^2}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\bar{X} \pm Z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}$</td>
+<td style="text-align:center">$\bar{X} \pm t_{\frac{\alpha}{2},n-1} \cdot \frac{S}{\sqrt{n}}$</td>
+<td style="text-align:center">$\left[ \cfrac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2},n-1}}, \cfrac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2},n-1}} \right]$</td>
+</tr>
+</tbody>
 </table>
 <p>One thing we need to remember is that when we construct those CIs, there are some assumptions. Therefore, there are conditions for us when we use the above formulae. Let&rsquo;s look at them explicitly.</p>
 <p>First of all, we need the sample $X_1,X_2,\cdots,X_{n-1},X_n$ to be <strong>i.i.d.</strong>. Therefore, the sample must be <strong>randomly and independently</strong> selected from the population. If this is not the case, the sample is not a good representation of the population, so the conclusion will not be useful. This condition must be met for all statistical inferences besides confidence intervals.</p>
@@ -227,47 +227,47 @@ $$</p>
 <h2 id="violation-of-the-normality-assumption">Violation of The Normality Assumption</h2>
 <p>We can use some simulations to see what happens when we draw sample from a non-normal distribution. I use some <code>python</code> code for the demonstration, and just use the distribution of the sample variance as an example. You can try others by yourself.</p>
 <p>Let&rsquo;s start with a heavily skewed distribution, such as an <strong>exponential distribution</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># import some helper functions from common libraries</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.stats <span style="color:#f92672">import</span> norm, chi2, poisson, expon
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#7f848e"># import some helper functions from common libraries</span>
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">import</span> <span style="color:#e06c75">numpy</span> <span style="color:#c678dd">as</span> <span style="color:#e06c75">np</span>
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">from</span> <span style="color:#e06c75">scipy.stats</span> <span style="color:#c678dd">import</span> <span style="color:#e06c75">norm</span>, <span style="color:#e06c75">chi2</span>, <span style="color:#e06c75">poisson</span>, <span style="color:#e06c75">expon</span>
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">import</span> <span style="color:#e06c75">matplotlib.pyplot</span> <span style="color:#c678dd">as</span> <span style="color:#e06c75">plt</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># create an exponential population with a rate parameter 1</span>
-</span></span><span style="display:flex;"><span>pop_expo <span style="color:#f92672">=</span> expon(scale <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>pop_var <span style="color:#f92672">=</span> pop_expo<span style="color:#f92672">.</span>var() <span style="color:#75715e"># population var is 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># create an exponential population with a rate parameter 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">pop_expo</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">expon</span>(<span style="color:#e06c75">scale</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">pop_var</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">pop_expo</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">var</span>() <span style="color:#7f848e"># population var is 1</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># we can have a look at the shape of the population distribution</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># you can see it is heavily skewed to the right by uncommenting the next line</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># plt.plot(np.linspace(0,10,100), pop_expo.pdf(np.linspace(0,10,100)))</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># we can have a look at the shape of the population distribution</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># you can see it is heavily skewed to the right by uncommenting the next line</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># plt.plot(np.linspace(0,10,100), pop_expo.pdf(np.linspace(0,10,100)))</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># now we draw a sample with size n=10</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># each time we draw a sample, we compute the score (chiscore) and record it</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># we repeat the process 10,000 times</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># so we have 10,000 chiscore</span>
-</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>          <span style="color:#75715e"># sample size</span>
-</span></span><span style="display:flex;"><span>chiscores <span style="color:#f92672">=</span> []  <span style="color:#75715e"># place holder for chiscore in each sample</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># now we draw a sample with size n=10</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># each time we draw a sample, we compute the score (chiscore) and record it</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># we repeat the process 10,000 times</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># so we have 10,000 chiscore</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">n</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">10</span>          <span style="color:#7f848e"># sample size</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">chiscores</span> <span style="color:#56b6c2">=</span> []  <span style="color:#7f848e"># place holder for chiscore in each sample</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>):
-</span></span><span style="display:flex;"><span>    sample <span style="color:#f92672">=</span> pop_expo<span style="color:#f92672">.</span>rvs(size <span style="color:#f92672">=</span> n)       <span style="color:#75715e"># draw a sample with size n</span>
-</span></span><span style="display:flex;"><span>    s2 <span style="color:#f92672">=</span> sample<span style="color:#f92672">.</span>var(ddof <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)          <span style="color:#75715e"># compute the sample variance</span>
-</span></span><span style="display:flex;"><span>    chiscore <span style="color:#f92672">=</span> (n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> s2 <span style="color:#f92672">/</span> pop_var  <span style="color:#75715e"># compute the chiscore</span>
-</span></span><span style="display:flex;"><span>    chiscores<span style="color:#f92672">.</span>append(chiscore)         <span style="color:#75715e"># record the chiscore</span>
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">for</span> <span style="color:#e06c75">_</span> <span style="color:#56b6c2">in</span> <span style="color:#e5c07b">range</span>(<span style="color:#d19a66">10000</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">sample</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">pop_expo</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">rvs</span>(<span style="color:#e06c75">size</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">n</span>)       <span style="color:#7f848e"># draw a sample with size n</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">s2</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">sample</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">var</span>(<span style="color:#e06c75">ddof</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">1</span>)          <span style="color:#7f848e"># compute the sample variance</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">chiscore</span> <span style="color:#56b6c2">=</span> (<span style="color:#e06c75">n</span> <span style="color:#56b6c2">-</span> <span style="color:#d19a66">1</span>) <span style="color:#56b6c2">*</span> <span style="color:#e06c75">s2</span> <span style="color:#56b6c2">/</span> <span style="color:#e06c75">pop_var</span>  <span style="color:#7f848e"># compute the chiscore</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">chiscores</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">append</span>(<span style="color:#e06c75">chiscore</span>)         <span style="color:#7f848e"># record the chiscore</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># now we can compare the distribution of chiscores with</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># a theoretical chi-squared distribution with n-1 DOF</span>
-</span></span><span style="display:flex;"><span>rv <span style="color:#f92672">=</span> chi2(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)   <span style="color:#75715e"># create a chi-squared random variable with n-1 DOF</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># now we can compare the distribution of chiscores with</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># a theoretical chi-squared distribution with n-1 DOF</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">rv</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">chi2</span>(<span style="color:#e06c75">n</span><span style="color:#56b6c2">-</span><span style="color:#d19a66">1</span>)   <span style="color:#7f848e"># create a chi-squared random variable with n-1 DOF</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### look at the histogram of the chiscores from the simulation in red colour</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>hist(chiscores, bins <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>, density <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>, ec<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;k&#39;</span>) 
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### look at the theoretical density function of a chi-squared rv with n-1 DOF in blue colour</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">0</span>, n<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">100</span>), rv<span style="color:#f92672">.</span>pdf(np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">0</span>, n<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">100</span>)), <span style="color:#e6db74">&#39;b-&#39;</span>)
-</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span><span style="color:#7f848e">### look at the histogram of the chiscores from the simulation in red colour</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">plt</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">hist</span>(<span style="color:#e06c75">chiscores</span>, <span style="color:#e06c75">bins</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">50</span>, <span style="color:#e06c75">density</span> <span style="color:#56b6c2">=</span> <span style="color:#e5c07b">True</span>, <span style="color:#e06c75">color</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#39;r&#39;</span>, <span style="color:#e06c75">ec</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#39;k&#39;</span>) 
+</span></span><span style="display:flex;"><span><span style="color:#7f848e">### look at the theoretical density function of a chi-squared rv with n-1 DOF in blue colour</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">plt</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">plot</span>(<span style="color:#e06c75">np</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">linspace</span>(<span style="color:#d19a66">0</span>, <span style="color:#e06c75">n</span><span style="color:#56b6c2">*</span><span style="color:#d19a66">5</span>, <span style="color:#d19a66">100</span>), <span style="color:#e06c75">rv</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">pdf</span>(<span style="color:#e06c75">np</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">linspace</span>(<span style="color:#d19a66">0</span>, <span style="color:#e06c75">n</span><span style="color:#56b6c2">*</span><span style="color:#d19a66">5</span>, <span style="color:#d19a66">100</span>)), <span style="color:#98c379">&#39;b-&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">plt</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">show</span>()
 </span></span></code></pre></div><p>You can manipulate the above code to check different sample size. I have tried $n=10,50,100$. The results are shown below:</p>
 <p><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/expon_pop_chi_simulation.png" alt=""></p>
 <p>As you can see, they do not really fit even with large sample sizes.</p>
 <p>We can also manipulate the above code to see what happens from a different kind of population. Say, we draw samples from a Poisson population with a mean $\lambda = 4$. This is achieved by:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pop_pois <span style="color:#f92672">=</span> poisson(<span style="color:#ae81ff">4</span>)
-</span></span><span style="display:flex;"><span>pop_var <span style="color:#f92672">=</span> pop_pois<span style="color:#f92672">.</span>var() <span style="color:#75715e"># population variance is 4</span>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#e06c75">pop_pois</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">poisson</span>(<span style="color:#d19a66">4</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">pop_var</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">pop_pois</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">var</span>() <span style="color:#7f848e"># population variance is 4</span>
 </span></span></code></pre></div><p>The simulation results are:</p>
 <p><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/pois_pop_chi_simulation.png" alt=""></p>
 <p>In this case, it is not bad at all, even $Pois(4)$ is not normal. Notice that $Pois(4)$ is roughly symmetrical around its mean. Even though the population is still skewed to the right, but the data after $x &gt; 10$ is negligible.</p>
