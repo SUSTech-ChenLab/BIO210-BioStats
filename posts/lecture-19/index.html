@@ -192,7 +192,7 @@ $$</p>
 <p>Even though we do not know the population mean, we know that <strong>&ldquo;the probability the above interval contains the population mean is 95%&rdquo;</strong>. Okay, the previous sentence in bold needs further explanation to remove confusion. What we have derived is:</p>
 <p>$$\mathbb{P}\left( \bar{X}-1.96 \cfrac{\sigma}{\sqrt{n}} \leqslant \mu \leqslant \bar{X}+1.96 \cfrac{\sigma}{\sqrt{n}} \right) = 0.95 \tag{M}$$</p>
 <p>Again, we can think of probability as relative frequency. Whenever we draw a sample, we can put the values of $\bar{X}$, $n$ and $\sigma$ into the formula to get a 95% CI. Then we draw another sample. The value of $\bar{X}$ will change and we get another 95% CI. If we keep doing this for a large number of times, we will get a large number of different 95% CIs. Among all those 95% CIs, 95% of them will contain the population mean $\mu$. That&rsquo;s exactly what the formula $(\mathrm{M})$ tells us. To help us visualise the interpretation, we can draw the sampling distribution of the sample mean:</p>
-<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/95CI.png" width="400px">
+<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/95CI.png" width="400px"/>
 </figure>
 
 <p>Note that the width on the $x$-axis of the red-shaded area is $2 \times 1.96\sigma_{\bar{X}} = 3.92 \frac{\sigma}{\sqrt{n}}$, which is the same length as the 95% CI. Whenever we draw a sample, we have a sample mean represented by the dot at the bottom. Then we can construct a 95% CI with the length $3.92 \frac{\sigma}{\sqrt{n}}$ (double arrowed line) centred around the sample mean. Due the same length of the 95% CI and the bottom width of the red-shaded area, whenever a sample mean falls inside the red-shaded area, the 95% CI is guaranteed to cover the population mean (the middle dashed line). Whenever a sample mean falls outside the red-shaded area, the 95% CI is guaranteed NOT to cover the population mean. The probability of the sample mean falling into the red-shaded area is basically 95% due to the normal distribution.</p>
@@ -200,24 +200,24 @@ $$</p>
 <h3 id="confidence-interval-for-the-mean-with-unknown-variance">Confidence Interval For The Mean With Unknown Variance</h3>
 <p>In general, it is unrealistic for us to know the population variance $\sigma^2$ in practice. How can we construct a 95% confidence interval? Intuitively, we can just replace the population standard deviation $\sigma$ with the sample standard deviation $s=\sqrt{\frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2}$, can we? It is natural for us to do that. Does this work? Here is the simulation from $100,000$ 95% confidence intervals constructed by drawing samples with size $n=8$ from a normal population with a known variance:</p>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: center"></th>
-          <th style="text-align: center">By $\boldsymbol{\bar{x} \pm 1.96 \cfrac{\sigma}{\sqrt{n}}}$</th>
-          <th style="text-align: center">By $\boldsymbol{\bar{x} \pm 1.96 \cfrac{s}{\sqrt{n}}}$</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">% of intervals covering $\mu$</td>
-          <td style="text-align: center">$95.24\%$</td>
-          <td style="text-align: center">$90.55\%$</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">By $\boldsymbol{\bar{x} \pm 1.96 \cfrac{\sigma}{\sqrt{n}}}$</th>
+<th style="text-align:center">By $\boldsymbol{\bar{x} \pm 1.96 \cfrac{s}{\sqrt{n}}}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">% of intervals covering $\mu$</td>
+<td style="text-align:center">$95.24\%$</td>
+<td style="text-align:center">$90.55\%$</td>
+</tr>
+</tbody>
 </table>
 <p>By definition, we should expect about 95% of those 95% CIs containing the population mean $\mu$, and $\bar{x} \pm 1.96 \cfrac{\sigma}{\sqrt{n}}$ does. However, only ~90% of the 95% CIs by $\bar{x} \pm 1.96 \cfrac{s}{\sqrt{n}}$ contain $\mu$, indicating we have introduced some errors when we replace $\sigma$ with $s$.</p>
 <p>The reason we can construct 95% CIs as previously described is based on the property that $\cfrac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim \mathcal{N}(0,1)$. However, when we replace $\sigma$ with $s$, the random variable $\cfrac{\bar{X}-\mu}{S/\sqrt{n}}$ does not follow a standard normal distribution. Here is the histogram of from $100,000$ simulations compared with a standard normal curve:</p>
-<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/t_simulation.png" width="500px">
+<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/t_simulation.png" width="500px"/>
 </figure>
 
 <p>As you can see, the distribution of $\cfrac{\bar{X}-\mu}{S/\sqrt{n}}$ (grey histogram) is a bit lower than the standard normal around $0$ and higher at the tail regions.</p>
@@ -244,7 +244,7 @@ $$</p>
 <p>$$f_{T}(t) = \cfrac{\Gamma \left(\frac{\nu+1}{2}\right)}{\sqrt{\pi\nu}\,\Gamma \left(\frac{\nu}{2}\right)} \left( 1+\cfrac{t^2}{\nu} \right)^{-\frac{\nu+1}{2}} $$</p>
 <p>where $\nu$ is the degree of freedom. That is a very scary PDF. Luckily, we do not really need to memorise it, but you do need to practice calculating related probabilities using <code>R</code> or <code>Excel</code>.</p>
 <p>As you have already seen the simulation, the shape of a $\boldsymbol{t}$-distribution is very similar to a standard normal distribution. It is symmetrical around $0$, just a bit lower than the standard normal near $0$ and higher at the tail regions. With increasing $\nu$, the $\boldsymbol{t}$-distribution becomes more and more like the standard normal and eventually will become the standard normal when $\nu \to \infty$:</p>
-<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/t_distr.png" width="400px">
+<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/t_distr.png" width="400px"/>
 </figure>
 
 <h3 id="use-boldsymbolt-distributions-to-construct-95-cis-for-boldsymbolmu">Use $\boldsymbol{t}$-Distributions To Construct 95% CIs For $\boldsymbol{\mu}$</h3>

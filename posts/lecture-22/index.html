@@ -171,11 +171,12 @@
             <p>Now that we have figured out the sampling distribution of the sample proportion, we can make interval estimation and construct confidence intervals for the <strong>sample proportion</strong>. Before we do that, let&rsquo;s use an example to look the distribution of $P$ one more time.</p>
 <h2 id="a-simplified-version-of-gene-expression">A Simplified Version of Gene Expression</h2>
 <p>As we know, <strong>DNA</strong> is our genetic material. In order for a gene to function, the gene needs to be &ldquo;converted&rdquo; into proteins<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. This process is describe by the <strong>central dogma of molecular biology</strong> that we learnt in high school. Here is the draft version of it from <strong>Francis Crick&rsquo;s</strong> conference notes in a symposium held at London back in 1957, one year before the central dogma was officially published:</p>
-<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/central_dogma.jpg" width="700px">
+<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/central_dogma.jpg" width="700px"/>
 </figure>
 
 <blockquote>
-<p>Credit: &ldquo;Ideas on protein synthesis (Oct. 1956)&rdquo;. <a href="https://wellcomecollection.org/works/xmscu3g4">Wellcome Collection</a>. <a href="http://rightsstatements.org/vocab/InC/1.0/">In copyright</a></p></blockquote>
+<p>Credit: &ldquo;Ideas on protein synthesis (Oct. 1956)&rdquo;. <a href="https://wellcomecollection.org/works/xmscu3g4">Wellcome Collection</a>. <a href="http://rightsstatements.org/vocab/InC/1.0/">In copyright</a></p>
+</blockquote>
 <p>The first step is the conversion into RNA using DNA as the template, a procedure called <strong>transcription</strong>. In modern days, we have sequencing technologies to quantify the number of RNA molecules of each gene in a particular sample (see <strong>Lecture 1</strong>). Getting those numbers is very important, because they can tell us many things about the sample we study, such as the status and the identity. Different genes may have different numbers of RNA molecules in a sample. For example, the gene <em>GAPDH</em> encodes an enzyme that is important for glycolysis. The cells need a lot of it, so it has many RNA molecules to be translated into proteins. Other genes may not have that many RNA molecules, not because they are not important,but for many complicated reasons which are left for you to explore in your molecular and cell biology class.</p>
 <p>There are over 20,000 genes. Each time we perform an experiment, we get certain number of molecules from a sample. Those molecules basically come from those 20,000 genes, so we have 20,000 integer values for each experiment, representing <strong>molecular counts</strong> for those genes. However, experiments are ever perfect. We never get the same amount of molecules even for the same sample. Let&rsquo;s say, we have three different experiments. In the first one, we are able to obtain 20 million molecules; in the second experiment, we capture 40 million molecules and the third 30 million molecules. Once we are done, we observe that the number of molecules of <em>GAPDH</em> in those three experiments are $1990$, $4020$ and $3005$, respectively. Can we say that the <strong>true values</strong> of <em>GAPDH</em> in those three experiments are different? Probably not. The differences might be caused by the total number of molecules we get per experiment. Remember the total number of molecules are the results of 20,000 genes. Therefore, it is the relative quantity of the RNA of the gene that is of our interest, that is, the <strong>sample proportion</strong> we talked about. We call it the <strong>gene expression level</strong>.</p>
 <p>Now let&rsquo;s see a different gene called <em>PLK1</em>, which is an essential genes for the cell cycle progression. Its gene expression level is not as high as <em>GAPDH</em>, and say we know its true gene expression level as:</p>
@@ -184,42 +185,42 @@
 <p>Now we ask the following question: what is the sampling distribution of the sample proportion of <em>PLK1</em> if we draw one million $(10^6)$ molecules from the population? We use what we learnt in the last lecture and expect the proportion should follow:</p>
 <p>$$P_{PLK1} \ \dot\sim \ \mathcal{N} \left(\mu_{P} = \pi = 1.126 \times 10^{-6}, \sigma_{P}^2 = \cfrac{\pi(1-\pi)}{n} = 1.126 \times 10^{-12} \right)$$</p>
 <p>We can do some simulations on the computer to see if our expectation is correct. The following is some very crude <code>python</code> codes for this purpose, but it works and the speed is acceptable:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># import some helper modules</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#7f848e"># import some helper modules</span>
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">import</span> <span style="color:#e06c75">numpy</span> <span style="color:#c678dd">as</span> <span style="color:#e06c75">np</span>
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">from</span> <span style="color:#e06c75">collections</span> <span style="color:#c678dd">import</span> <span style="color:#e06c75">Counter</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># set the seed</span>
-</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># set the seed</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">np</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">random</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">seed</span>(<span style="color:#d19a66">42</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># the expression level of PLK1 is 0.000001126088083</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># which is roughly 100 per 88803000</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># so we create a array with 88802900 zeroes and 100 ones</span>
-</span></span><span style="display:flex;"><span>molecules <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">88803000</span>,))
-</span></span><span style="display:flex;"><span>molecules[:<span style="color:#ae81ff">100</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># the expression level of PLK1 is 0.000001126088083</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># which is roughly 100 per 88803000</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># so we create a array with 88802900 zeroes and 100 ones</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">molecules</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">np</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">zeros</span>((<span style="color:#d19a66">88803000</span>,))
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">molecules</span>[:<span style="color:#d19a66">100</span>] <span style="color:#56b6c2">=</span> <span style="color:#d19a66">1</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># then we take 1000000 molecules from that</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># check how many 1s (PLK1 molecules) there</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># record the number</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># repeat for 1000 times</span>
-</span></span><span style="display:flex;"><span>results <span style="color:#f92672">=</span> [] <span style="color:#75715e"># hold the number of PLK1 per experiment</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## the following loop takes a few seconds</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>):
-</span></span><span style="display:flex;"><span>    plk1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice(molecules, <span style="color:#ae81ff">1000000</span>)<span style="color:#f92672">.</span>sum() <span style="color:#75715e"># take 1e6 molecules, check how many 1s (PLK1)</span>
-</span></span><span style="display:flex;"><span>    results<span style="color:#f92672">.</span>append(plk1)                              <span style="color:#75715e"># record the number</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># then we take 1000000 molecules from that</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># check how many 1s (PLK1 molecules) there</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># record the number</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># repeat for 1000 times</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">results</span> <span style="color:#56b6c2">=</span> [] <span style="color:#7f848e"># hold the number of PLK1 per experiment</span>
+</span></span><span style="display:flex;"><span><span style="color:#7f848e">## the following loop takes a few seconds</span>
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">for</span> <span style="color:#e06c75">_</span> <span style="color:#56b6c2">in</span> <span style="color:#e5c07b">range</span>(<span style="color:#d19a66">1000</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">plk1</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">np</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">random</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">choice</span>(<span style="color:#e06c75">molecules</span>, <span style="color:#d19a66">1000000</span>)<span style="color:#56b6c2">.</span><span style="color:#e06c75">sum</span>() <span style="color:#7f848e"># take 1e6 molecules, check how many 1s (PLK1)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">results</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">append</span>(<span style="color:#e06c75">plk1</span>)                              <span style="color:#7f848e"># record the number</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># now look at the results</span>
-</span></span><span style="display:flex;"><span>Counter(results)
+</span></span><span style="display:flex;"><span><span style="color:#7f848e"># now look at the results</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">Counter</span>(<span style="color:#e06c75">results</span>)
 </span></span></code></pre></div><p>If you plot the results as PMF, you will see:</p>
-<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/plk1_sim.png" width="500px">
+<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/plk1_sim.png" width="500px"/>
 </figure>
 
 <p>That looks like a positively skewed distribution. It will probably not be approximated by a normal distribution well, since normal distributions are symmetrical. Indeed, if we plot the normal distribution $\mathcal{N}\left(1.126 \textmd{ per million}, 1.126 \textmd{ per million}^2\right)$ on top of it, we can see:</p>
-<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/plk1_sim_norm.png" width="500px">
+<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/plk1_sim_norm.png" width="500px"/>
 </figure>
 
 <p>There are two things that we noticed from the above picture. The first one is that the centre of the gravity of the simulation data (red bars) lies between $0$ and $1$, but the theoretical normal distribution (the grey line) is centred on $1.126$. The second thing is that the simulation data does not take the negative values, but there is still a lot of data in the normal distribution at the negative side of the axis.</p>
 <p>The red bars look a lot like a Poisson distribution. Indeed, if we put on top of a Poisson PMF with $\lambda = 1.126 \textmd{ per million}$, we have:</p>
-<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/plk1_sim_pois.png" width="500px">
+<figure><img src="https://xichenlab.com/BIO210-BioStats/images/post_figures/plk1_sim_pois.png" width="500px"/>
 </figure>
 
 <h2 id="conditions-of-the-normal-approximation">Conditions of The Normal Approximation</h2>
